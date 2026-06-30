@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Batch Exporter",
+  "description": "Batch export selected Gemini conversations to Markdown and JSON, locally in your browser.",
+  "version": "0.2.0",
+  "permissions": ["downloads", "storage", "activeTab"],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://bard.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gemini.google.com/*",
+        "https://bard.google.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Gemini Batch Exporter"
+  }
+}
