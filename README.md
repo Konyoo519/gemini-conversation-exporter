@@ -42,4 +42,6 @@ Chrome Manifest V3 extension for locally batch exporting selected Gemini convers
 - `manifest.json`: extension permissions and content script configuration.
 - `content.js`: Gemini page UI injection and conversation extraction.
 - `background.js`: batch orchestration, ZIP generation, and download.
-- `styles.css`: injected extension UI styles.
+- `styles.css`: injected extension UI styles..
+
+
